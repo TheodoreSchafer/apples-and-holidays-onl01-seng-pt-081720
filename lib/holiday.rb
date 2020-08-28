@@ -22,12 +22,6 @@ holiday_supplies[:summer][:fourth_of_july][1]
 end
 
 
-
-
-
-
-
-
 def add_supply_to_winter_holidays(holiday_hash, supply)
   holiday_hash[:winter].each do |holiday, item|
     item.push supply
@@ -71,7 +65,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday.each do |holiday, item|
         puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
       end
-    end 
+    end
 end
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
@@ -80,8 +74,6 @@ end
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-
-
 
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.collect do |season, holidays|
